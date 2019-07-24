@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="750.0" styleClass="container" stylesheets="@Login.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="JobOptimizer.GUI_Module.MapController">
+   <children>
+      <AnchorPane id="topPane" fx:id="topPane" layoutX="9.0" onMouseClicked="#requestfocus" onMouseDragged="#pick" onMouseEntered="#reveal" onMouseExited="#hide" onMousePressed="#determine" onMouseReleased="#drop" prefHeight="88.0" prefWidth="736.0" style="-fx-background-color: #5F6E7B;" styleClass="background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="username" fx:id="username" layoutX="77.0" layoutY="31.0" text="GENETIC ALGORITHM ON JOB ASSIGNMENT PROBLEM" textFill="WHITE">
+               <font>
+                  <Font name="Arimo" size="22.0" />
+               </font>
+            </Label>
+            <Button id="btnClose" fx:id="btnClose" cancelButton="true" layoutX="695.0" layoutY="5.0" mnemonicParsing="false" onAction="#closeButtonAction" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="34.0" prefWidth="49.0" style="-fx-background-color: transparent;" styleClass="btn-logout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="close-button" fitHeight="28.0" fitWidth="66.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../../../../RROS/src/rros/closeImage.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust saturation="-1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow color="#2d4154" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <TextField fx:id="searchField" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="47.0" prefHeight="28.0" prefWidth="275.0" promptText="Enter Search Parameter" style="-fx-background-radius: 10;" visible="false">
+               <font>
+                  <Font name="Arimo" size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#256990c4" height="11.35" offsetX="1.0" offsetY="1.0" radius="2.3375" width="0.0" />
+               </effect>
+            </TextField>
+         </children>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </AnchorPane>
+      <ProgressBar id="pBar" fx:id="pBar" layoutX="474.0" layoutY="528.0" prefHeight="18.0" prefWidth="223.0" progress="0.0" />
+      <Label id="pBarLabel" fx:id="pBarLabel" layoutX="476.0" layoutY="511.0" text="Generating 0 TCPs as Individuals...0%" />
+      <Pane id="tbContainer" layoutX="14.0" layoutY="102.0">
+         <children>
+            <TableView id="tbView" fx:id="tbView" prefHeight="176.0" prefWidth="137.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+x:325,y:180 Dopemu
+x:401,y:166 Awe Close
+x:384,y:198 Simbiat
+x:347,y:235 Toms
+x:289,y:217 Yaba
+x:242,y:270 Ikotun
+x:388,y:240 papa ajao
+x:401,y:304 Somolu Mstreet
+x:358,y:372 Bode Thomas
+x:431,y:432 Broad Street
+x:431,y:466 Goriola Street
+x:451,y:479 D street
